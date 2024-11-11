@@ -1,0 +1,30 @@
+// Responsive
+@media (max-width: 768px) {
+  .card .row {
+    flex-direction: column;
+  }
+}
+
+// Colors
+$odoo-primary: #714B67;
+$odoo-gray: #E7E9ED;
+$nav-link-color: $odoo-primary;
+$nav-link-hover-color: black;
+
+// Nav
+.nav-tabs .nav-link {
+  padding: 20px 0 2Opx 0;
+  background-color: $odoo-gray;
+};
+
+// Spaces
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  o: $spacer * 1.25,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;

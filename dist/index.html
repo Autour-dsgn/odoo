@@ -8,17 +8,109 @@
 </head>
 
 <body>
-  <div class="card" style="width: 18rem">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
+  <div class="container" style="max-width: 600px; margin: 40px auto">
+
+    <!-- ODOO CARD VARIANT A -->
+    <div class="card">
+
+      <!-- Nav tab -->
+      <div class="card-header bg-dark">
+        <ul class="nav nav-tabs card-header-tabs" role="tablist">
+          <li class="nav-item bg-white me-2">
+            <button class="nav-link active rounded-0" id="nav-tab-1" data-bs-toggle="tab" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">Tab 1</button>
+          </li>
+          <li class="nav-item bg-light me-2">
+            <button class="nav-link rounded-0" id="nav-tab-2" data-bs-toggle="tab" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">Tab 2</button>
+
+          </li>
+          <li class="nav-item bg-light me-2">
+            <button class="nav-link rounded-0" id="nav-tab-3" data-bs-toggle="tab" data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3" aria-selected="false">Tab 3</button>
+
+          </li>
+          <li class="nav-item bg-dark">
+            <a class="nav-link bg-secondary text-white rounded-0" href="#" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content">
+        <!-- Tab 1 -->
+        <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+          <div class="border-bottom-0">
+            <div class="card-body px-0 pb-0 rounded-0">
+              <div class="ps-o">
+                <h5 class="card-title mt-3"><b>Card title</b></h5>
+                <h6 class="card-subtitle mb-4 text-muted"><b>Card subtitle</b></h6>
+              </div>
+                <div class="container">
+                <div class="row px-0">
+                  <!-- Left column -->
+                  <ul class="nav flex-column col-md-6 align-items-start px-0 " id="myTab" role="tablist">
+                    <li class="nav-item border-top border-1 w-100 ps-o" role="presentation">
+                      <p class="nav-link active ps-0 py-4 mb-0" id="item-1-tab" data-bs-toggle="tab" data-bs-target="#pic-1" type="button" role="tab" aria-controls="img-1-tab" aria-selected="true">An item</p>
+                    </li>
+                    <li class="nav-item border-top border-1 w-100 ps-o" role="presentation">
+                      <p class="nav-link ps-0 py-4 mb-0" id="item-2-tab" data-bs-toggle="tab" data-bs-target="#pic-2" type="button" role="tab" aria-controls="img-2-tab" aria-selected="false">A second item</p>
+                    </li>
+                    <li class="nav-item border-top border-1 w-100 ps-o" role="presentation">
+                      <p class="nav-link ps-0 py-4 mb-0" id="item-3-tab" data-bs-toggle="tab" data-bs-target="#pic-3" type="button" role="tab" aria-controls="img-3-tab" aria-selected="false">A third item</p>
+                    </li>
+                  </ul>
+                  <!-- Right column -->
+                  <div class="tab-content col-md-6 px-0">
+                    <div class="tab-pane fade show active" id="pic-1" role="tabpanel" aria-labelledby="pic-1-tab">
+                      <img src="https://placehold.co/300x230/0000ff/fff?text=Pic-1" class="img-fluid w-100" alt="Picture-1">
+                    </div>
+                    <div class="tab-pane fade" id="pic-2" role="tabpanel" aria-labelledby="pic-2-tab">
+                      <img src="https://placehold.co/300x230/ffff00/000?text=Pic-2" class="img-fluid w-100" alt="Picture-2">
+                    </div>
+                    <div class="tab-pane fade" id="pic-3" role="tabpanel" aria-labelledby="pic-3-tab">
+                      <img src="https://placehold.co/300x230/000/fff?text=Pic-3" class="img-fluid w-100" alt="Picture-3">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2 -->
+        <div class="tab-pane fade show" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+          <div class="d-flex justify-content-center position-relative">
+            <div class="card-body py-5">
+              <p class="text-center mb-4">Loading...</p>
+              <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status" style="border-width: .4rem; border-color: #000 #0000 #0000; width: 4rem; height: 4rem">
+                  <span style="background-color: #000; border-radius: .25em; width: .4rem; height: .4rem; position: absolute; transform: translate(.15rem, .15rem)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3 -->
+        <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+            <div class="card-body p-0">
+              <div class="row row-cols-12 m-0">
+                <div class="col-md-4 p-0">
+                  <img src="https://placehold.co/200x200/ff0000/fff?text=Image" class="img-fluid w-100" alt="Image">
+                </div>
+                <div class="card-body col-md-8 p-sm-4 pb-md-0">
+                  <h5 class="card-title"><b>Card title</b></h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- Footer card -->
+      <div class="card-footer ps-o text-white bg-dark border-0">2 days ago
+      </div>
   </div>
 
   <script src="/index.ace9c8ff.js" defer=""></script>
-</body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+</div></body>
 </html>
