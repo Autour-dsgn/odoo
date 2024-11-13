@@ -1,3 +1,17 @@
+// Style
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+$font-family-base: 'Inter', sans-serif;
+
+// Colors
+$odoo-primary: #714B67;
+$odoo-gray-1: #F9FAFB;
+$odoo-gray-2: #374155 ;
+$odoo-gray-3: #252733;
+$disabled: #d2d6db;
+$shadow: #f4f8fc;
+$nav-link-color: black;
+$nav-link-hover-color: $odoo-primary;
+
 // Responsive
 @media (max-width: 768px) {
   .card .row {
@@ -5,17 +19,83 @@
   }
 }
 
-// Colors
-$odoo-primary: #714B67;
-$odoo-gray: #E7E9ED;
-$nav-link-color: $odoo-primary;
-$nav-link-hover-color: black;
+// Card
+.card-design {
+  border-radius: 7px;
+  box-shadow: 0px 15px 50px 0px $disabled;
+}
 
 // Nav
-.nav-tabs .nav-link {
-  padding: 20px 0 2Opx 0;
-  background-color: $odoo-gray;
+$border-radius: 2rem;
+$nav-pills-link-active-bg: $odoo-primary;
+
+.nav-pills .nav-link {
+  padding: 5px 0 5px 0;
+  background-color: $odoo-gray-1;
+  border: 2px solid;
+  border-color: $odoo-primary;
 };
+
+.nav-pills .nav-link .nav-link.active {
+  background-color: $odoo-primary;
+  color: white;
+}
+
+#disabled {
+  color: $disabled;
+  border-color: $disabled;
+}
+
+// Tab
+.card-body .nav-link {
+  padding-left: 0px;
+
+
+}
+.nav-align-left .nav-link.active {
+  width: 100%;
+  text-align: start;
+  color: $odoo-primary;
+  font-weight: 600;
+  border-left: 2px solid $odoo-primary;
+  padding: 15px;
+}
+
+#navs-left-alignment-preview {
+  align-content: space-around;
+}
+
+.row {
+  background-color: $shadow;
+  border-radius: 7px;
+}
+
+// Loading
+svg {
+  width: 80px;
+}
+
+svg path {
+  --total-length: 136px;
+  stroke-linecap: round;
+  stroke-width: 6;
+  stroke: $odoo-primary;
+  fill: none;
+  stroke-dasharray: var(--total-length) var(--total-length);
+  animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    stroke-dashoffset: calc(-1 * var(--total-length));
+  }
+  30%, 50% {
+    stroke-dashoffset: 0;
+  }
+  80%, 100% {
+    stroke-dashoffset: var(--total-length);
+  }
+}
 
 // Spaces
 $spacer: 1rem !default;

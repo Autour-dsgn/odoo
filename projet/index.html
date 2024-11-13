@@ -7,28 +7,30 @@
   <link rel="stylesheet" href="./assets/scss/main.scss">
 </head>
 
+<!-- I was confused about making a very personalized design, or keeping a Boostrap logic :-) So I created an “in-between” -->
+
 <body>
   <div class="container" style="max-width: 600px; margin: 40px auto;">
 
-    <!-- ODOO CARD VARIANT A -->
-    <div class="card">
+    <!-- ODOO CARD VARIANT B -->
+    <div class="card-design p-o">
 
       <!-- Nav tab -->
-      <div class="card-header bg-dark">
-        <ul class="nav nav-tabs card-header-tabs" role="tablist">
-          <li class="nav-item bg-white me-2">
-            <button class="nav-link active rounded-0" id="nav-tab-1" data-bs-toggle="tab" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">Tab 1</button>
+      <div class="card-header mb-4">
+        <ul class="nav nav-pills nav-justified" role="tablist">
+          <li class="nav-item me-2">
+            <button class="nav-link active" id="nav-tab-1" data-bs-toggle="tab" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">Tab 1</button>
           </li>
-          <li class="nav-item bg-light me-2">
-            <button class="nav-link rounded-0" id="nav-tab-2" data-bs-toggle="tab" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">Tab 2</button>
+          <li class="nav-item me-2">
+            <button class="nav-link" id="nav-tab-2" data-bs-toggle="tab" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">Tab 2</button>
 
           </li>
-          <li class="nav-item bg-light me-2">
-            <button class="nav-link rounded-0" id="nav-tab-3" data-bs-toggle="tab" data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3" aria-selected="false">Tab 3</button>
+          <li class="nav-item me-2">
+            <button class="nav-link" id="nav-tab-3" data-bs-toggle="tab" data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3" aria-selected="false">Tab 3</button>
 
           </li>
-          <li class="nav-item bg-dark">
-            <a class="nav-link bg-secondary text-white rounded-0" href="#" aria-disabled="true">Disabled</a>
+          <li class="nav-item">
+            <a class="nav-link" id="disabled" aria-disabled="true">Disabled</a>
           </li>
         </ul>
       </div>
@@ -36,52 +38,66 @@
       <div class="tab-content">
         <!-- Tab 1 -->
         <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
-          <div class="border-bottom-0">
-            <div class="card-body px-0 pb-0 rounded-0">
-              <div class="ps-o">
-                <h5 class="card-title mt-3"><b>Card title</b></h5>
-                <h6 class="card-subtitle mb-4 text-muted"><b>Card subtitle</b></h6>
-              </div>
+          <div class="card-body">
+            <div class="ok">
+              <h3 class="card-title pb-1">Card title</h3>
+              <h6 class="card-subtitle text-muted pb-4">Card subtitle</h6>
+
+            </div>
                 <div class="container">
-                <div class="row px-0">
+                <div class="row">
+
                   <!-- Left column -->
-                  <ul class="nav flex-column col-md-6 align-items-start px-0 " id="myTab" role="tablist">
-                    <li class="nav-item border-top border-1 w-100 ps-o" role="presentation">
-                      <p class="nav-link active ps-0 py-4 mb-0" id="item-1-tab" data-bs-toggle="tab" data-bs-target="#pic-1" type="button" role="tab" aria-controls="img-1-tab" aria-selected="true">An item</p>
-                    </li>
-                    <li class="nav-item border-top border-1 w-100 ps-o" role="presentation">
-                      <p class="nav-link ps-0 py-4 mb-0" id="item-2-tab" data-bs-toggle="tab" data-bs-target="#pic-2" type="button" role="tab" aria-controls="img-2-tab" aria-selected="false">A second item</p>
-                    </li>
-                    <li class="nav-item border-top border-1 w-100 ps-o" role="presentation">
-                      <p class="nav-link ps-0 py-4 mb-0" id="item-3-tab" data-bs-toggle="tab" data-bs-target="#pic-3" type="button" role="tab" aria-controls="img-3-tab" aria-selected="false">A third item</p>
-                    </li>
-                  </ul>
-                  <!-- Right column -->
                   <div class="tab-content col-md-6 px-0">
                     <div class="tab-pane fade show active" id="pic-1" role="tabpanel" aria-labelledby="pic-1-tab">
-                      <img src="https://placehold.co/300x230/0000ff/fff?text=Pic-1" class="img-fluid w-100" alt="Picture-1">
+                      <img src="./assets/img/asset-1.png" class="img-fluid w-100" style="border-radius: 7px 0 0 7px;" alt="Image-1">
                     </div>
                     <div class="tab-pane fade" id="pic-2" role="tabpanel" aria-labelledby="pic-2-tab">
-                      <img src="https://placehold.co/300x230/ffff00/000?text=Pic-2" class="img-fluid w-100" alt="Picture-2">
+                      <img src="./assets/img/asset-2.png" class="img-fluid w-100" style="border-radius: 7px 0 0 7px;" alt="Image-2">
                     </div>
                     <div class="tab-pane fade" id="pic-3" role="tabpanel" aria-labelledby="pic-3-tab">
-                      <img src="https://placehold.co/300x230/000/fff?text=Pic-3" class="img-fluid w-100" alt="Picture-3">
+                      <img src="./assets/img/asset-3.png" class="img-fluid w-100" style="border-radius: 7px 0 0 7px;" alt="Image-3">
                     </div>
                   </div>
+
+                  <!--Right column -->
+                  <div class="tab-pane fade active show col-md-6 p-4" id="navs-left-alignment-preview" role="tabpanel" aria-labelledby="navs-left-alignment-preview-tab">
+
+                    <div class="nav-align-left">
+                      <ul class="nav d-flex flex-column" role="tablist">
+
+                        <li class="nav-item" role="presentation">
+                          <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#pic-1" aria-selected="true">An item</button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                          <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#pic-2" aria-selected="false" tabindex="-1">An item</button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                          <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#pic-3" aria-selected="false" tabindex="-1">An item</button>
+                        </li>
+                      </ul>
+                     </div>
+                  </div>
+
                 </div>
               </div>
             </div>
-          </div>
+
         </div>
 
         <!-- Tab 2 -->
         <div class="tab-pane fade show" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
           <div class="d-flex justify-content-center position-relative" >
-            <div class="card-body py-5">
+            <div class="card-body py-4">
               <p class="text-center mb-4">Loading...</p>
               <div class="d-flex justify-content-center">
-                <div class="spinner-border" role="status" style="width: 4rem; height: 4rem; border-width: 0.40rem; border-color:transparent; border-top-color:black;">
-                  <span style="background-color: black; width:0.40rem; height: 0.40rem; position: absolute; border-radius: 0.25em; transform: translate(0.15rem,0.15rem)"></span>
+                <div class="spinner">
+                  <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 59">
+                    <path d="M55.42 25.14C55.64 26.48 55.75 27.85 55.75 29.25C55.75 43.27 44.46 54.61 30.5 54.61C16.54 54.61 5.25 43.27 5.25 29.25C5.25 15.23 16.54 3.89 30.5 3.89 C34.8 3.89 38.84 4.97 42.38 6.86"/>
+                    <path d="M44.28 33.78C44.04 32.45 43.9 31.08 43.88 29.68C43.64 15.66 54.73 4.13 68.69 3.9C82.65 3.66 94.13 14.8 94.37 28.82C94.61 42.84 83.52 54.36 69.56 54.6C65.26 54.68 61.19 53.67 57.62 51.84"/>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -90,12 +106,12 @@
 
         <!-- Tab 3 -->
         <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
-            <div class="card-body p-0">
+            <div class="card-body pt-3">
               <div class="row row-cols-12 m-0">
                 <div class="col-md-4 p-0">
-                  <img src="https://placehold.co/200x200/ff0000/fff?text=Image" class="img-fluid w-100" alt="Image">
+                  <img src="./assets/img/asset-4.png" class="img-fluid w-100" style="border-radius: 7px 0 0 7px;" alt="Image-4">
                 </div>
-                <div class="card-body col-md-8 p-sm-4 pb-md-0">
+                <div class="card-body col-md-8 justify-content-center p-o">
                   <h5 class="card-title"><b>Card title</b></h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -105,7 +121,8 @@
           </div>
       </div>
       <!-- Footer card -->
-      <div class="card-footer ps-o text-white bg-dark border-0">2 days ago
+      <div class="badge bg-secondary text-wrap mt-4">
+        2 days ago
       </div>
   </div>
 
@@ -113,4 +130,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
+
 </html>
