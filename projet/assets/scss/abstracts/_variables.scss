@@ -29,17 +29,18 @@ $nav-link-hover-color: $odoo-primary;
 $border-radius: 2rem;
 $nav-pills-link-active-bg: $odoo-primary;
 
-.nav-pills .nav-link {
-  padding: 5px 0 5px 0;
-  background-color: $odoo-gray-1;
-  border: 2px solid;
-  border-color: $odoo-primary;
+.nav-pills {
+  .nav-link {
+    padding: 5px 0 5px 0;
+    background-color: $odoo-gray-1;
+    border: 2px solid;
+    border-color: $odoo-primary;
+    &:active {
+      background-color: $odoo-primary;
+      color: white;
+    }
+  }
 };
-
-.nav-pills .nav-link .nav-link.active {
-  background-color: $odoo-primary;
-  color: white;
-}
 
 #disabled {
   color: $disabled;
@@ -47,18 +48,22 @@ $nav-pills-link-active-bg: $odoo-primary;
 }
 
 // Tab
-.card-body .nav-link {
-  padding-left: 0px;
-
+.card-body {
+  .nav-link {
+    padding-left: 0px;
+  }
 
 }
-.nav-align-left .nav-link.active {
-  width: 100%;
-  text-align: start;
-  color: $odoo-primary;
-  font-weight: 600;
-  border-left: 2px solid $odoo-primary;
-  padding: 15px;
+// I had a problem to implement the "&:active", so I left a syntax close to CSS.
+.nav-align-left {
+  .nav-link.active {
+    width: 100%;
+    text-align: start;
+    color: $odoo-primary;
+    font-weight: 600;
+    border-left: 2px solid $odoo-primary;
+    padding: 15px;
+  }
 }
 
 #navs-left-alignment-preview {
