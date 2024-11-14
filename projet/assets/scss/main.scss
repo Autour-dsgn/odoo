@@ -1,11 +1,7 @@
-@import "./abstracts/variables";
-
-// Create my own map here
-
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
 
-// Merge the maps here
+@import "./abstracts/variables";
+@import "./abstracts/mixin";
 
 @import "~bootstrap/scss/bootstrap";
